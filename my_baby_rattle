@@ -1,0 +1,21 @@
+ originator = []
+
+ shifter = []
+
+ x=0
+
+ "azbycxd".scan(/./) do
+     |letters|
+     originator << letters
+   end
+
+ until originator.length == shifter.length do
+     shifter << "a"
+   end
+
+ until shifter == originator do
+     until shifter[x] == originator[x] do
+       shifter[x] = shifter[x].next
+     end
+   x += 1
+   end
